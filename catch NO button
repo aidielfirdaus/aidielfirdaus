@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sayang</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h2{
+                text-align: center;
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            .login-page{
+                width: fit-content;
+                padding: 330px;
+                margin: 0 auto;
+                font-size: 100%;
+            }
+            .form{
+                position: relative;
+                z-index: 1;
+                max-width: 360px;
+                margin: 0 auto 100px;
+                padding: 45px;
+                text-align: center;
+                max-width: 300px;
+                padding: 10px;
+                background-color: black; /*form background*/
+                box-shadow: 0 0 8px rgba(0,0,0,4);
+                color: white;
+                font-size: 20px;
+            }
+            .login-page#popup{
+                position: fixed;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 600px;
+                padding: 50px;
+                visibility: hidden;
+                opacity: 0;
+                transition: .5s;
+            }
+            .login-page#popup.active{
+                visibility: visible;
+                top: 50%;
+                opacity: 1;
+                transition: .5s;
+            }
+            .banner-text{
+                position: relative;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                color: #fff;
+            }
+            .banner-text a{
+                text-decoration: none;
+                border: 1px solid black;
+                font-size: 17px;
+                padding: 10px 35px;
+                color: blueviolet;
+                display: inline-block;
+                margin-top: 5%;
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            .banner-text a:hover{
+                border-color: yellow; 
+                background: yellow;
+                color: #262626;
+            }
+            
+            /* for btn1 */
+            a#btn1{
+                position: relative;
+                top: 80%;
+                left: 20%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                color: #fff;
+                visibility: hidden;
+            }
+            a#btn1{
+                text-decoration: none;
+                border: 1px solid black;
+                font-size: 17px;
+                padding: 10px 35px;
+                color: blueviolet;
+                display: inline-block;
+                margin-top: 5%;
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            a#btn1:hover{
+                border-color: yellow; 
+                background: yellow;
+                color: #262626;
+            }
+            
+            /* for btn2 */
+            a#btn2{
+                position: relative;
+                top: 30%;
+                left: 90%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                color: black;
+                visibility: hidden;
+            }
+            a#btn2{
+                text-decoration: none;
+                border: 1px solid black;
+                font-size: 17px;
+                padding: 10px 35px;
+                color: blueviolet;
+                display: inline-block;
+                margin-top: 5%;
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            a#btn2:hover{
+                border-color: yellow; 
+                background: yellow;
+                color: #262626;
+            }
+            
+            /* for btn3 */
+            a#btn3{
+                position: relative;
+                top: 60%;
+                left: 30%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                color: #fff;
+                visibility: hidden;
+            }
+            a#btn3{
+                text-decoration: none;
+                border: 1px solid black;
+                font-size: 17px;
+                padding: 10px 35px;
+                color: blueviolet;
+                display: inline-block;
+                margin-top: 5%;
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            a#btn3:hover{
+                border-color: yellow; 
+                background: yellow;
+                color: #262626;
+            }
+            
+            /* for btn4 */
+            a#btn4{
+                position: relative;
+                top: 20%;
+                left: 69%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                color: #fff;
+                visibility: hidden;
+            }
+            a#btn4{
+                text-decoration: none;
+                border: 1px solid black;
+                font-size: 17px;
+                padding: 10px 35px;
+                color: blueviolet;
+                display: inline-block;
+                margin-top: 5%;
+                font-family: poppins;
+                text-transform: uppercase;
+            }
+            a#btn4:hover{
+                border-color: yellow; 
+                background: yellow;
+                color: #262626;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Hi Sayang</h2>
+        </div>
+        <div>                    
+            <img src="tenor.gif" class="center">
+
+            <div class="banner-text" >
+                <a href="#" onclick="toggle()">YES</a>
+                <a href="#" id="btn" onclick="toggle1()">NO</a>
+                </div>
+            <div>
+                <a href="#" id="btn1" onclick="toggle2()">NO</a>
+                <a href="#" id="btn2" onclick="toggle3()">NO</a>
+                <a href="#" id="btn3" onclick="toggle4()">NO</a>
+                <a href="#" id="btn4" onclick="toggle5()">NO</a>
+            </div>
+        </div>
+        
+        
+         <div class="login-page" id="popup">
+                <div class="form" id="myForm">
+                    <div>
+                        Aww Saya sayang awak jugak!!
+                    </div>
+                </div>
+         </div>
+        
+        <script type="text/javascript">
+          function toggle(){
+              var popup = document.getElementById('popup');
+              popup.classList.toggle('active');
+          }
+          function toggle1(){
+              document.getElementById('btn').style.visibility = "hidden";
+              document.getElementById('btn1').style.visibility = "visible";
+          }
+          function toggle2(){
+              document.getElementById('btn1').style.visibility = "hidden";
+              document.getElementById('btn2').style.visibility = "visible";
+          }
+          function toggle3(){
+              document.getElementById('btn2').style.visibility = "hidden";
+              document.getElementById('btn3').style.visibility = "visible";
+          }
+          function toggle4(){
+              document.getElementById('btn3').style.visibility = "hidden";
+              document.getElementById('btn4').style.visibility = "visible";
+          }
+          function toggle5(){
+              document.getElementById('btn4').style.visibility = "hidden";
+              document.getElementById('btn1').style.visibility = "visible";
+          }
+        </script>
+    </body>
+</html>
